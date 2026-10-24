@@ -23,10 +23,18 @@
 
 产物：`HwVRGlassLite.exe`（单文件、无第三方运行库依赖）。
 
+## 下载 / 安装
+
+安装包在 [Releases](https://github.com/fkun1754/HwVRGlassLite/releases) 发布，内置驱动（补丁驱动、原厂备份、渲染资源、透视参数），可独立安装。
+
+- 新装默认目录：`C:\Program Files\HwVRGlassLite`；
+- 已安装过：沿用注册表 `HKLM\SOFTWARE\HwVRGlassLite\InstallPath` 记录的目录覆盖升级；
+- 安装后打开客户端 → 高级设置 → 切换到补丁模式 → 启动 VR。
+
 ## 说明
 
-- 本仓库**不包含**华为官方驱动、资源文件或安装包；使用前请自备官方 PC 助手安装包，并确认你拥有对应设备。
-- 驱动切换逻辑默认安装目录为 `C:\Program\HwVRGlassLite`，可通过 `--register` 重新登记。
+- 本仓库源码**不包含**华为官方驱动二进制与安装包；安装包请从 Releases 下载，并确认你拥有对应设备。
+- 驱动切换逻辑默认安装目录为安装包所在目录，可通过 `--register` 重新登记。
 - CLI：`--status`、`--start-vr`、`--stop-vr`、`--to-patch`、`--to-factory`、`--register`、`--unregister`、`--verify`。
 
 ## 更新日志
@@ -45,6 +53,16 @@ A lightweight Windows client for Huawei VR Glass (CV10). It replaces the officia
 
 Features: one-click factory/patch driver switching (asks before closing SteamVR/Steam), haptic modes (passthrough / translate / mute), controller pose tuning, coexistence with the official assistant, SteamVR native passthrough and native brightness control.
 
-Build with MinGW-w64 via `build.ps1`. The repository does not ship Huawei proprietary drivers or resources; bring your own official installation package and only use it with hardware you own.
+## Download / Install
+
+Installers are published in [Releases](https://github.com/fkun1754/HwVRGlassLite/releases). The installer bundles the driver (patched driver, stock backup, render resources and camera parameters) and can be installed standalone.
+
+- New installs default to `C:\Program Files\HwVRGlassLite`.
+- Existing installs are upgraded in place using `HKLM\SOFTWARE\HwVRGlassLite\InstallPath`.
+- After installing: open the client → Advanced → switch to patch mode → Start VR.
+
+Build with MinGW-w64 via `build.ps1`. The repository source does not include Huawei proprietary driver binaries or the installer; download the package from Releases.
+
+Only use it with hardware you own.
 
 Pure-AI-built project (DeepSeek V4 Flash + DeepSeek Harness).
