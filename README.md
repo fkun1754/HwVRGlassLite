@@ -6,14 +6,12 @@
 
 ## 功能
 
-- 设备状态：VR 头显、6DOF 插件、左右手柄、SteamVR（3 秒自动刷新）
-- 启动 / 关闭 SteamVR，非补丁模式会弹窗提示改用官方助手
 - 原厂驱动 ⇄ 补丁驱动一键切换（切换前自动询问并关闭 SteamVR / Steam）
 - 震动模式：透传 / 翻译 / 静音（补丁驱动生效）
 - 手柄姿态微调（旋转）
 - 与官方助手共存：切补丁时临时改名屏蔽，切回原厂自动恢复
-- 浅色 / 深色 / 跟随系统三套主题，窗口可缩放、居中
-- 单实例运行、二级窗口互斥
+- SteamVR 原生透视
+- SteamVR 原生亮度调节
 
 ## 构建
 
@@ -45,7 +43,7 @@
 
 A lightweight Windows client for Huawei VR Glass (CV10). It replaces the official PC assistant for day-to-day control and adds a haptic patch, driver mode switching and controller pose correction.
 
-Features: device status, start/stop SteamVR, factory/patch driver switching (asks before closing SteamVR/Steam), haptic modes, pose tuning, coexistence with the official assistant, light/dark/auto themes, resizable and centered windows, single-instance UI.
+Features: one-click factory/patch driver switching (asks before closing SteamVR/Steam), haptic modes (passthrough / translate / mute), controller pose tuning, coexistence with the official assistant, SteamVR native passthrough and native brightness control.
 
 Build with MinGW-w64 via `build.ps1`. The repository does not ship Huawei proprietary drivers or resources; bring your own official installation package and only use it with hardware you own.
 
